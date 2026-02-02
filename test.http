@@ -1,0 +1,8 @@
+POST  http://localhost:3333/users/create
+Content-Type: application/json
+
+{
+    "email" : "kawan@gmail",
+    "name" : "kawan",
+    "password" : "1234",
+}
