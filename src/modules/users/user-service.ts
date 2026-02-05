@@ -18,13 +18,9 @@ export class UserServices {
     return user;
   }
 
-  async list() {
+  async list({ userId }: { userId: string }) {
     const users = await prisma.user.findMany({
-      select: {
-        id: true,
-        name: true,
-        createAt: true,
-      },
+      where: { id: userId },
     });
     return users;
   }
