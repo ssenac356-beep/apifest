@@ -4,7 +4,6 @@ import jwt from "@fastify/jwt";
 import { ZodError } from "zod";
 const app = fastify();
 const JWT_SECRET = "897874487fdsfdsf";
-
 app.register(routes);
 app.register(jwt, { secret: JWT_SECRET });
 
